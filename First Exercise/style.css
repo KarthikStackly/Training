@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 150px;
+}
+
+li {
+  list-style-type: square;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+input,
+textarea {
+  width: 250px;
+}
