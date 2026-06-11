@@ -1,3 +1,9 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  font-size: 16px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -29,4 +35,29 @@ td {
 input,
 textarea {
   width: 250px;
+}
+
+section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+div {
+  padding: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: orange;
 }
