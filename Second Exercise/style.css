@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 20px;
+}
+
+.navbar {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+li {
+  list-style: none;
+}
