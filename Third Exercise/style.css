@@ -22,6 +22,7 @@
 .navbar-div {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .navbar-list {
@@ -43,6 +44,36 @@
   border-radius: 10px;
   color: orange;
   border: 1.5px solid orange;
+}
+
+/* Main middle section */
+
+.bgm-img {
+  background-position: center;
+}
+
+.main-sec2 {
+  margin: 80px;
+}
+
+.main-text1 {
+  justify-self: center;
+}
+
+.main-text2 {
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.main-sec2-divs {
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.main-sec2-divs p {
+  justify-self: center;
 }
 
 /* Footer section */
