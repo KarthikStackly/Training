@@ -19,6 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px 25px;
+  height: 55px;
 }
 
 .sticky-banner-img-div {
@@ -36,23 +37,34 @@ header {
 }
 
 /* Navbar section */
-.navbar-div {
+.navbar-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   align-items: center;
+  background-color: white;
 
-  /* z-index: 999;
-  top: 60px;
-  height: 70px;
+  z-index: 999;
+  top: 55px;
+  height: 65px;
 
-  position: sticky; */
-  /* margin-top: 50vh; */
+  position: sticky;
+}
+
+.navbar-div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  color: rgb(74, 73, 73);
 }
 
 .navbar-list {
   display: flex;
   gap: 15px;
+}
+
+.navbar-list li:first-child {
+  color: orange;
 }
 
 .navbar-list span {
@@ -62,15 +74,18 @@ header {
 .navbar-list li {
   list-style: none;
   margin: 0 10px;
+  /* color: rgb(74, 73, 73); */
+
+  cursor: pointer;
 }
 
 .profile {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
-.profile p {
+.profile p:first-of-type {
   font-weight: bold;
 }
 
@@ -79,8 +94,10 @@ header {
   color: orange;
 }
 
-.profile p {
-  margin: 0 10px;
+.profile .size-6 {
+  height: 20px;
+  stroke-width: 1.5;
+  /* cursor: pointer; */
 }
 
 .profile-btn {
@@ -115,7 +132,18 @@ header {
   background-position: center;
 }
 
+.main-sec1-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 280px;
+  left: 320px;
+}
+
 .main-sec1-text1 {
+  /* top: 200px; */
   font-size: 70px;
   margin-bottom: 16px;
 }
@@ -148,6 +176,7 @@ header {
 
 .main-sec1-dropdown {
   border: none;
+  padding: 0 10px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -159,10 +188,18 @@ header {
   outline: none;
 }
 
-.main-sec1-dropdown option {
+option {
   font-size: 16px;
   font-weight: bold;
   border: none;
+}
+
+option:checked {
+  color: orange;
+}
+
+option:hover {
+  cursor: pointer;
 }
 
 .search-div-pt3 {
@@ -172,12 +209,15 @@ header {
 }
 
 .settings-icon {
-  width: 40px;
-  margin: auto;
+  width: 45px;
+  padding: 10px;
+  /* margin: auto; */
   color: orange;
   background-color: rgb(226, 210, 181);
   border: 1px solid rgb(226, 210, 181);
-  border-radius: 5px;
+  border-radius: 10px;
+
+  cursor: pointer;
 }
 
 .search-div-pt3 a {
@@ -187,6 +227,7 @@ header {
   display: flex;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 
 .search-icon {
@@ -357,5 +398,13 @@ footer {
 }
 
 .footer-socials-div {
-  height: 30px;
+  height: 35px;
+}
+
+.footer-socials-div img {
+  border: 1px solid rgb(58, 54, 54);
+  border-radius: 20px;
+  padding: 5px;
+
+  cursor: pointer;
 }
