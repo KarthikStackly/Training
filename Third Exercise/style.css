@@ -85,6 +85,10 @@ header {
   cursor: pointer;
 }
 
+.hidden-menu {
+  display: none;
+}
+
 .profile {
   display: flex;
   gap: 10px;
@@ -613,7 +617,7 @@ footer {
     font-size: 14px;
   }
 
-  .footer-newsletter input {
+  .input-email {
     padding: 10px;
   }
 
@@ -631,10 +635,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  * {
-    font-size: 10px;
-  }
-
   .sticky-banner {
     padding: 0 10px;
   }
@@ -649,7 +649,7 @@ footer {
   }
 
   .logo {
-    width: 50px;
+    width: 80px;
   }
 
   .navbar-container {
@@ -661,7 +661,19 @@ footer {
   }
 
   .navbar-list {
-    gap: 5px;
+    display: none;
+  }
+
+  .hidden-menu {
+    display: block;
+    font-weight: bold;
+    margin: 0 10px;
+    color: orange;
+    cursor: pointer;
+  }
+
+  .profile {
+    gap: 10px;
   }
 
   .profile-icons {
@@ -673,9 +685,96 @@ footer {
     font-size: 10px;
     padding: 2px 5px;
   }
+
+  .main-sec2-text2 {
+    text-align: center;
+  }
+
+  .main-sec1-input,
+  .main-sec1-input::placeholder {
+    text-wrap: nowrap;
+    font-size: 12px;
+  }
+
+  .search-div {
+    gap: 2px;
+  }
+
+  .search-div-pt3 {
+    gap: 5px;
+    max-width: 400px;
+  }
+
+  .search-div-pt3 a {
+    padding: 5px;
+    width: 20px;
+  }
+
+  .settings-icon {
+    padding: 5px;
+    stroke-width: 1;
+    width: 25px;
+  }
+
+  .search-div-pt3 span {
+    display: none;
+  }
+
+  .main-sec1-dropdown,
+  .main-sec1-dropdown option {
+    font-size: 10px;
+    /* padding: 0; */
+  }
+
+  .footer-sec1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-contact-div {
+    gap: 15px;
+    justify-content: space-evenly;
+  }
+
+  .footer-sec2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-lists li {
+    font-size: 14px;
+  }
+
+  .footer-contact,
+  .footer-email {
+    white-space: nowrap;
+  }
+
+  .footer-newsletter {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-sec3 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-socials {
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 425px) {
+  * {
+    font-size: 10px;
+  }
+
   .profile-icons {
     display: none;
   }
@@ -693,10 +792,6 @@ footer {
   }
 
   .sticky-banner-btn {
-    font-size: 10px;
-  }
-
-  * {
     font-size: 10px;
   }
 
@@ -719,13 +814,21 @@ footer {
     display: none;
   }
 
+  .hidden-menu {
+    display: block;
+    font-weight: bold;
+    margin: 0 5px;
+    color: orange;
+    cursor: pointer;
+  }
+
   .main-sec1-content-container {
-    top: 30%;
+    top: 45%;
   }
 
   .main-sec1-text1 {
     font-size: 30px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   .main-sec1-text2 {
@@ -800,6 +903,11 @@ footer {
     padding: 10px;
   }
 
+  .footer-sec1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .footer-sec3 {
     flex-direction: column;
     gap: 10px;
@@ -842,5 +950,59 @@ footer {
 
   .footer-terms {
     font-size: 10px;
+  }
+
+  .footer-sec2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 10px;
+
+    /* flex-direction: column; */
+
+    /* flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly; */
+  }
+
+  .footer-newsletter {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-newsletter p {
+    font-size: 10px;
+  }
+
+  .input-email,
+  .input-email::placeholder {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .footer-newsletter button {
+    padding: 5px;
+  }
+
+  .input-checkbox {
+    width: 10px;
+  }
+
+  .footer-lists li {
+    font-size: 10px;
+    margin: 10px;
+  }
+
+  .footer-copyright {
+    margin: 2px;
+  }
+
+  .footer-email {
+    white-space: nowrap;
   }
 }
