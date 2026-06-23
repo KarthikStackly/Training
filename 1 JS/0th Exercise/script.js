@@ -83,11 +83,4 @@ Console interactions
 2. console.warn()
 3. console.error()
 4. console.clear()
-Follow-up tasks
-
-Task	Assigned to	Due date	Bucket
-			To do
-
-
-
 */
