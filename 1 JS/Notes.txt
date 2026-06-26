@@ -1,0 +1,71 @@
+
+Agenda
+
+- [x] JS fundies
+- [ ] DataTypes
+
+Meeting notes
+<script src="" />
+internal JS => Priority
+External JS => Clean Separation of code
+
+// Declaration
+// var a;
+
+// Initialization
+// a = 20
+
+// reuse
+// a = 30;
+
+// var and let can be reused
+// const cannot be reused
+// var can be redeclared
+// let and const cannot be redeclared
+
+Interactions: 
+
+1. Print in console - console.log() - Any value
+2. Pop up - alert() - Any Value	
+3. Confirm - confirm() - user selected boollean
+4. Prompt - prompt() - user's input
+5. Print on UI - document.writeln() - Any Value
+
+Console interactions
+
+1. console.log()
+2. console.warn()
+3. console.error()
+4. console.clear()
+
+
+DataTypes
+Type of Data stored. 
+
+1. Primitive DataType - Fundamental. Single values
+a. string - " xyz123"
+b. numerical - 123
+c. Boolean - true (1) / false (0)
+d. undefined - declared but not initialilzed with a value
+e. null - empty 
+
+
+2. Non-Primitive DataType - Multiple values
+a. Array - [ x, 1, abc , y[ ] ]
+call/access - Array[1]  or Array[Array.length-1]
+b. Object - { key1:value1, key2:value2, ... }
+call/access - Object.key1
+c. function - 
+operators -> +(addition), -(subtraction), *(multiplication), /(division), %(modulus), **(exponent), ++(increment), --(decrement), += -= *= /= (assignment), == === != !== (comparison)
+
+logical operators -> &&(AND), | |(OR), !(NOT)
+concatenation -> joining strings using +
+template literal -> to perform operations or use variables using `` as follows:  ${``}
+
+
+post -> var++, var--
+pre -> ++var, --var
+d. date - 
+ 
+
+
