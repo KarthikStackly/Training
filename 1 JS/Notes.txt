@@ -65,7 +65,56 @@ template literal -> to perform operations or use variables using `` as follows: 
 
 post -> var++, var--
 pre -> ++var, --var
+
+TypeCasting - implicit (done by system) and explicit (done by programmer)
+
+
+Implicit: 
+Any Non-Primitive Datatype, concat to Primitive datatype gives String
+String + Any Datatype = String
+Num + Num/Null/bool = Num
+Num + undefined => NaN (Not a Number whose value is zero) = num
+bool + bool/null = Num
+bool + undefined => NaN(Not a Number whose value is zero) = Num
+
+
+Explicit: 
+use constructors to intentionally convert the datatype to achieve a certain expected/controlled result
+ex: Number( ), String( ), Boolean( )
+Number( ) = 0
+Number("") = 0
+Number("Hi") = NaN
+Number("123") = 123
+Number(false/true) = 0/1
+Number(null) = 0
+Number(undefined) = NaN
+Number([123.67]) = NaN
+Number({j:8}) = NaN
+And since NaN has value 0, the end result is always a Number
+
+Booeanl( ) = false
+Boolean("") = false
+Boolean("abc") = true
+Boolean("123") = true
+Boolean(0) = false
+Boolean(any number except 0) = true
+Boolean (undefined) = false
+Boolean(null) = false
+Boolean([123,67]) = true
+Boolean({j:8}) = true
+
+
+
+Flow control Statement
+JS executes code line by line. Flow control allows us to control how we want the program to run based on our logic. 
+
+1. Conditional - if, if-else, if-else-if, nested if, switch
+2. Loops - for, while (when exact no. of iterations is not known), do-while (executes min. once, and Then checks condition)
+
+for-of => array
+for-in => object
+
+
+
 d. date - 
  
-
-
