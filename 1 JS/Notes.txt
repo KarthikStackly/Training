@@ -3,6 +3,9 @@ Agenda
 
 - [x] JS fundies
 - [ ] DataTypes
+- [x] Operators
+- [x] TypeCasting & Flow Control Statements
+- [x] Functions
 
 Meeting notes
 <script src="" />
@@ -114,6 +117,55 @@ JS executes code line by line. Flow control allows us to control how we want the
 for-of => array
 for-in => object
 
+
+c. function - reusable block of code. 
+parameter - variable to be used inside the function block of code. 
+
+1. named function - 
+function namedFunc(param){}
+
+1. anonymous function - 
+let anonymousFunc = function(param){}
+
+1. arrow function
+let arrowFunc = (param) => {}
+
+Scope: Availability of something...
+var - global scope
+let - block scope
+const block scope
+variables defined inside a block of code, have pre-defined scope. within the function, var can exist outside the block it was defined in, while let & var cannot be called outside the blocks they are defined in. 
+
+Hoisting: can be called before it is defined. var and namedFunc can be called without throwing an error... 
+
+IIFE - self-invoking function. does not need explicit invoking.
+condition: should be called first inside the file. top priority. 
+(function(param) {})(param)
+ex: commonly used in eCommerce websites to show sales popups...
+
+Higher order func & callback func - 
+when func inside func, the inside func will be resolved first, and is called a callback func. the outside func is the higher order func. 
+
+generator function - 
+function* gen(){
+yield "10% cashback"
+yield "100% cashback"
+yield "50% cashback"
+yield "better luck next time"
+}
+let genVal = gen()
+console.log(genVal)
+genval, being primitive datatype, will have to store more than one value because of the function. How do we resolve this? 
+console.log(genVal.next());
+output: {value: "10% cashback", done: false}
+here done tells us if there's another value next or not. 
+final output: {value: undefined, done: true}
+
+return statement - to return the outcome of the function that we just executed. 
+
+currying & uncurrying structure - 
+uncurrying - straightforward
+currying - recurring or looped. complicated
 
 
 d. date - 
