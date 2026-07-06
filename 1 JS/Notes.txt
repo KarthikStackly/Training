@@ -2,10 +2,11 @@
 Agenda
 
 - [x] JS fundies
-- [ ] DataTypes
+- [x] DataTypes
 - [x] Operators
 - [x] TypeCasting & Flow Control Statements
 - [x] Functions
+- [x] Data Structures
 
 Meeting notes
 <script src="" />
@@ -170,3 +171,37 @@ currying - recurring or looped. complicated
 
 d. date - 
  
+
+Data Structures: 
+Spread operator: ... - to combine or join multiple values into a single DS. appears on right side of equation. 
+Array Spread: [...arr] - for arrays
+Object spread: {...obj} - for objects
+rest operator: (...args) - for functions
+
+Destructure: let [x,y] = arr - to separate multiple values into a single value. appears on left side of equation. 
+
+Array Advance Concepts: 
+Homogenous - same type of values can be stored
+Heterogenous - different types of values can be stored
+flexible - add & del values using methods
+a. Array Manipulation
+
+1. push( ), add value to end
+2. pop( ), remove value from end
+3. shift( ), remove value from start
+4. unshift( ), add value from start
+5. splice( ), add & remove same time
+arr.splice( startIndex, deleteCount, addValueOptional)
+
+b. Array Merge
+
+1. concat( ), join arrays
+2. slice( ), select part of array - arr.slice(startIndex. endIndex+1)
+3. fill( ), fills the array with a value, replace... same or diff values - arr.fill(value, startIndex, endIndex + 1)
+4. includes( ), checks for value to search in array
+5. indexOf( ), find first occurrence index no of given value from array
+6. lastIndexOf( ), find last occurrence index no of given value from array
+7. sort( ), arrange values in asc to desc order or vice versa with reverse( ). drawback - only works with single digit values. Because it works on ASCII table??
+8. flat( ), destructure nested array into single array - flat(Infinity) - How many nested
+
+
