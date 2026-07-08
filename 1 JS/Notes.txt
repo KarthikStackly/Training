@@ -7,6 +7,9 @@ Agenda
 - [x] TypeCasting & Flow Control Statements
 - [x] Functions
 - [x] Data Structures
+- [ ] Date Constructor
+- [ ] Asynchronous Programming
+
 
 Meeting notes
 <script src="" />
@@ -205,3 +208,37 @@ b. Array Merge
 8. flat( ), destructure nested array into single array - flat(Infinity) - How many nested
 
 
+
+Array Advanced Concepts:
+Array Higher Order Methods:
+
+- arr.forEach( ( currEl, index, tot ) => { return } ) - loop over the array and perform operations
+- arr.map( ( currEl, index, tot ) => { return } ) - loop over the array
+- arr.filter( (c,i,t) => { return } ) - filter array based on logic/condition
+- arr.find( ( c,i,t )=>{ return } ) - find in the array
+- arr.reduce( ( acc, c, i, t) =>{ return acc } ) - any operation that involves accumulating 
+- arr.some( ( c,i,t ) => { return } ) - similar to OR - atleast 1 is true
+- arr.every( ) - similar to AND
+- arr.sort( (a, b) => { return a-b } ) - Ascending
+- arr.sort( (a, b) => { return b-a } )
+- arr.toString() - converts array to string
+- arr1.join(string) - convert to string and merge a string
+
+
+Advance String Operations: 
+
+- str.charAt( num ) - character at index in a string
+- str.length( ) - length of a string
+- str.slice( startInd, endIndex+1) - slices a string
+- str.toUpperCase( )
+- str.toLowerCase( )
+- str.trim( ) - trims empty spaces before after
+- str.trimStart( ), str.trimEnd( )
+- str.indexOf( ), str.lastIndexOf( ), str.indexOf( "a", 2 ) - start from 3rd place
+- str.replace( str1. str2 ) - replace 1st occurrence of str1 with str2
+- str.replaceAll( str1, str2) - replace all occurrences of str1 with str2  
+- str.includes( ) - returns boolean
+- str.startsWith( ) -  returns boolean
+- str.endsWith( ) - returns boolean
+- str.split( ) - breaks string to array, returns array
+- str.split( delimiter/splitter ) - splits string into two parts, returns array with delimiter with the split string
