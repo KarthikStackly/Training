@@ -242,3 +242,45 @@ Advance String Operations:
 - str.endsWith( ) - returns boolean
 - str.split( ) - breaks string to array, returns array
 - str.split( delimiter/splitter ) - splits string into two parts, returns array with delimiter with the split string
+
+
+Date Constructor: 
+LIVE Data related to Date, time, Time zone, etc in a single Object.
+let data1 = Date( ); 
+let data2 = new Date( ); getFullYear( ) - gets exact year
+
+- get( ) - get something specific from date data
+- set( ) - manipulate date data
+- getFullYear( ), getMonth( ), getDate( ), getDay( ), getHours getMinutes getSeconds time()
+- data1.toLocaleTimeString( ), .toLocaleDateString( ), and for both: .toLocaleString
+
+
+Synchronous - line by line execution. JavaScript give preference to Synchronous code. 
+Asynchronous - There is an in-built time delay. 
+-> setTimeOut( ), setInterval( ). Promise( )
+setTimeOut => executes once after the time delay
+setInterval => executes multiple times with a time delay in between, unless an exit condition is given
+
+- setTimeout( ( ) => { console.log(""); }, 2000 )
+- setInterval( ( ) => { let clock = new Date( );  console.log( clock.toLocaleTimeString( ) ); }, 1000 )
+- Promise
+- API - Application Program Interface
+- fetch() - to get data from a remote resource
+- resolve state - successful data. to resolve use .then()
+- reject state - error data. to access, use .catch()
+- bending state - incoming data. to resolve use .finally()
+- JSON datatype. we can't use directly, we have to resolve the Promise which we get from the api call. 
+
+let api = "https.//fakestoreapi.com/products/1";
+fetch(api).then((response)=>{
+console.log(response);
+return response.json(); //return converted response which contains data inside which needs to be unpacked still...
+}).then((data) => {
+console.log(data); //actual resolved data
+})
+.catch((error)=>{
+console.warn(error); //catch any errors and warn user
+}).finally( ()=>{
+console.log("API is Working");
+}); //to end this entire fetch process
+
