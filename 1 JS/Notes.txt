@@ -284,3 +284,30 @@ console.warn(error); //catch any errors and warn user
 console.log("API is Working");
 }); //to end this entire fetch process
 
+
+DOM
+Document Object Model. Used to manipulate HTML Structure (elements/tags) through JavaScript. 
+Traditional methods - Select - document.getElementByTagName("h1");  document.getElemenByClassName("nameOfClass"); document.getElementById("nameOfId")
+Latest - querySelector: document.querySelector("h2"); document.querySelector(".nameOfClass"); document.querySelector("#nameOfId"); document.querySelectorAll("h3");
+
+Traverse - 	parent selector = document.querySelector(".child1").parentElement;
+child selector = document.querySelector(".parent").firstElementChild; document.querySelector(".parent").lastElementChild; document.querySelector(".child2").nextElementSibling; //we can chain multiple .nextElementSibling to keep traversing based on condition/logic... and .previousElementSibling
+
+Manipulate - to change properties inside an HTML element/tag like we have for h1/p/TextArea/Input/etc.
+document.querySelector("input").value = "";
+document.querySelector("h1").textContent/innerText= "";
+document.querySelector("h3").innerHTML = ` <h5></h5> ` ; //to add more HTML elements. Directly manipulating the DOM itself
+
+EventHandler - 
+btn.onCLick(") = function(){
+alert("Button Clicked");
+}
+
+EventListener-
+document.querySelector(".btn").addEventListener( "click", ()=>{
+h5.innerText = "Welcome Back!";
+} );
+style - document.querySelector("p").style.color = "green"; document.querySelector("p").style.fontSize= "50px;";
+
+ol.createElement("li"); ol.append(li); 
+createElement creates the element, but append Actually places it inside the DOM. 
