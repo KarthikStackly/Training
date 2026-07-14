@@ -3,9 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Exercise 1</title>
+    <title>JS Final Exercise</title>
   </head>
-  <body style="background-color: black">
-    <script src="task8.js" />
+  <!-- <body style="background-color: black"> -->
+  <body>
+    <div>
+      <input type="text" id="searchInp" placeholder="Search Product..." />
+      <button id="sortAscBtn">Low -> High</button>
+      <button id="sortDescBtn">High -> Low</button>
+    </div>
+    <br />
+    <button id="allBtn">All</button>
+    <button id="mensBtn">Men's Clothing</button>
+    <button id="womensBtn">Women's Clothing</button>
+    <button id="jeweleryBtn">Jewelery</button>
+    <button id="electronicsBtn">Electronics</button>
+    <br />
+    <div>
+      <h2>🛒 Cart (<span id="cartCount">0</span>)</h2>
+      <div id="cart"></div>
+    </div>
+
+    <div class="api"></div>
+
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 25%;
+        width: 50%;
+        background: white;
+        border: 1px solid black;
+        padding: 20px;
+        z-index: 1000;
+      "
+    >
+      <span
+        id="closeModal"
+        style="float: right; cursor: pointer; font-size: 24px"
+      >
+        &times;
+      </span>
+
+      <img id="modalImg" height="200" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+      <h3 id="modalPrice"></h3>
+    </div>
+
+    <script src="task9.js" />
   </body>
 </html>
