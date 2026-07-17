@@ -1,0 +1,9 @@
+Advantages of React: 
+
+Rendering is efficient.. unlike Functions in JS, Components are rendered in React but only on need basis, improving efficiency. 
+
+Called Single Page Application because we can create complex web pages in a single file???
+
+Component Based - all behaviours are grouped based on UI requirements and can be replicated or reused. 
+
+-DIFF B/N LIBRARY AND FRAMEWORK 
