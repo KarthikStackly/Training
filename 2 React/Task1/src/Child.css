@@ -1,0 +1,30 @@
+.child-card {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.child-card h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.child-card h3 {
+  color: #3498db;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.child-card p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
