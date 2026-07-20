@@ -7,3 +7,14 @@ Called Single Page Application because we can create complex web pages in a sing
 Component Based - all behaviours are grouped based on UI requirements and can be replicated or reused. 
 
 -DIFF B/N LIBRARY AND FRAMEWORK 
+
+Empty tags - Fragments
+write jsx code in the function, return it and export it. Then import it back in the main entry point and use self-closing tags to call it, not as a function but as a "component".
+a component myst only return a single Element, so as a practice we envelop all JSX inside a div to be returned... 
+
+Framework is a set of rules on how you might wanna code. Libary is a collection of code to use. 
+
+####RESEARCH ABOUT STRUCTURE OF THE PROJECT
+Props - a way of bundling data to be sent across from parent to child component, similar to params/args in function. 
+pass data or variable in the parent component. in the child, pass inside function argument call it props. then to access inside child, we use props.varName in {} because any JS inside JSX must be enveloped inside {}... The rest is considered HTML CSS???
+Alternatively, you can destructure the props inside the function args itself. 
