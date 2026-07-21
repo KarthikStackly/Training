@@ -18,3 +18,24 @@ Framework is a set of rules on how you might wanna code. Libary is a collection 
 Props - a way of bundling data to be sent across from parent to child component, similar to params/args in function. 
 pass data or variable in the parent component. in the child, pass inside function argument call it props. then to access inside child, we use props.varName in {} because any JS inside JSX must be enveloped inside {}... The rest is considered HTML CSS???
 Alternatively, you can destructure the props inside the function args itself. 
+
+###Styling
+
+Global style - index.css and app.css are global files. Classes defined in Any jsx file can be defined/styled in either of these .css files, and it will be applicable to all the .jsx files available in the source folder. 
+
+External style - Each jsx file having it's own .css file, imported in the respective component file. Priority?
+
+Module style - ModuleName.module.css and import XYZ from "./address" and then use className = {XYZ.whateverClassNameYouDefinedInTheFile}
+
+Inline style - declare style = {{stylingWithCamelCase}}
+
+Object style - create styling as an object, then pass it as style = {styleObj}
+
+
+###Conditional Rendering
+Render or Hide a component based on condition. We execute this using: 
+- Ternary Operator (condition ? ifTrue : ifFalse)
+- Logical Operator  (&& or || or !)
+
+
+------------------ React is a single page application (SPA) because uses a single html file and keeps transforming the same by adding removing structures based on what or how we define the components. It links to these jsx files through main.jsx. 
