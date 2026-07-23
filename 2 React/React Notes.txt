@@ -39,3 +39,9 @@ Render or Hide a component based on condition. We execute this using:
 
 
 ------------------ React is a single page application (SPA) because uses a single html file and keeps transforming the same by adding removing structures based on what or how we define the components. It links to these jsx files through main.jsx. 
+
+##Rendering lists with map
+
+### useState Hooks
+
+###RESEARCH LOCALHOST AND PORT NUMBERS
