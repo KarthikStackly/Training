@@ -45,3 +45,6 @@ Render or Hide a component based on condition. We execute this using:
 ### useState Hooks
 
 ###RESEARCH LOCALHOST AND PORT NUMBERS
+
+###HTTP builds relationship between server and client?? It is the standard/protocol to for communication over a network.
+###RESEARCH ABOUT DOMAIN, SUBDOMAIN, DIFF SUBDOMAINS/DOMAINS
