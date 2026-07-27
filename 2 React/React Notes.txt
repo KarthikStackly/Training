@@ -48,3 +48,13 @@ Render or Hide a component based on condition. We execute this using:
 
 ###HTTP builds relationship between server and client?? It is the standard/protocol to for communication over a network.
 ###RESEARCH ABOUT DOMAIN, SUBDOMAIN, DIFF SUBDOMAINS/DOMAINS
+
+If I have 10 fields in a form, I need to create 10 useState hooks. But can we do it with one?
+
+We can, by initializing with an object. Give key value pairs. 
+value, onChange, handleChange...
+
+setFormData({...formData, updatedVars/[e.target.name]: [e.target.value]})
+const {name, value} = e.target; [name]: value;
+onSubmit handleSubmit for forms
+avoid reloading of form by calling e.preventDefault(); check your conditions first then manually code the submit actions. 
