@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef2f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  width: 420px;
+  margin: 40px auto;
+}
+
+.app-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}

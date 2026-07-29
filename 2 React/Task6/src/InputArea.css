@@ -1,0 +1,45 @@
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-area textarea {
+  resize: none;
+
+  height: 90px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  outline: none;
+
+  font-size: 15px;
+}
+
+.input-area textarea:focus {
+  border-color: #4caf50;
+}
+
+.input-area button {
+  align-self: flex-end;
+
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4caf50;
+  color: white;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.input-area button:hover {
+  background: #43a047;
+}
