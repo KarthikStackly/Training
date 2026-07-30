@@ -7,8 +7,10 @@ function InputArea({ typeMsg, setTypeMsg, handleClick }) {
 
   return (
     <div className="input-area">
-      <textarea value={typeMsg} onChange={handleMsg}></textarea>
-      <button onClick={handleClick}>Send Message</button>
+      <textarea id={0} value={typeMsg} onChange={handleMsg}></textarea>
+      <button className="send-btn" onClick={handleClick}>
+        Send Message
+      </button>
     </div>
   );
 }
