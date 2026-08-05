@@ -58,3 +58,17 @@ setFormData({...formData, updatedVars/[e.target.name]: [e.target.value]})
 const {name, value} = e.target; [name]: value;
 onSubmit handleSubmit for forms
 avoid reloading of form by calling e.preventDefault(); check your conditions first then manually code the submit actions. 
+
+useEffect hook => a hook used to perform a side effect in a functional component. Side effects are tasks that happen outside the normal rendering process like: 
+- Fetch data from an application
+- updating the browser DOM manually
+- starting/stopping timers
+
+useEffect(()=>{
+    //code
+}, [dependencyArray])
+
+the dependencyArray contains all the variables that might affect change in data, which would trigger a re-render. If the array is left empty, the hook runs only once at the beginning of the render. 
+
+setTimeOut runs a block after a set delay time. 
+setInterval runs the block with a pause in between, as long as the program executes, until it is explicitly stopped (usually with a setTimeOut)
