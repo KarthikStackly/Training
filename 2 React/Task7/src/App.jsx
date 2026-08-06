@@ -1,9 +1,9 @@
-import Timer from "./Timer";
+import StopWatch from "./StopWatch";
 
 function App() {
   return (
     <div>
-      <Timer />
+      <StopWatch />
     </div>
   );
 }

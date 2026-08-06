@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stopwatch-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stopwatch-container h1 {
+  color: #333;
+}
+
+.timer {
+  width: 320px;
+
+  padding: 25px;
+
+  background: white;
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.button-group button {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.start {
+  background: #2e8b57;
+}
+
+.start:hover {
+  background: #256f47;
+}
+
+.stop {
+  background: #d9534f;
+}
+
+.stop:hover {
+  background: #b63d39;
+}
+
+.reset {
+  background: #0275d8;
+}
+
+.reset:hover {
+  background: #015aa7;
+}
+
+.button-group button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 500px) {
+  .timer {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+}
