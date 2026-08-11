@@ -72,3 +72,14 @@ the dependencyArray contains all the variables that might affect change in data,
 
 setTimeOut runs a block after a set delay time. 
 setInterval runs the block with a pause in between, as long as the program executes, until it is explicitly stopped (usually with a setTimeOut)
+
+useRef Hook
+- used to store data or return a mutable value
+- the value persists between renders
+
+const myRef = useRef(initialValue/null)
+
+Uses: 
+- to access DOM elements
+- to store value but not rerender
+- to remember previous value
