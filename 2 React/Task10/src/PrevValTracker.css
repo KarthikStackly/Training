@@ -1,0 +1,33 @@
+.container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.container input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
