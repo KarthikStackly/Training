@@ -83,3 +83,14 @@ Uses:
 - to access DOM elements
 - to store value but not rerender
 - to remember previous value
+
+useContext : 
+- it is used to share data across multiple components
+- it lets you to skip middle component when drilling down. 
+- you declare it in parent, and unpack directly in grandchild instead of passing through every generation. 
+
+- user authentication
+- dark mode
+- language 
+- global settings
+- shopping cart
