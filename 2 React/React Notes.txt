@@ -94,3 +94,23 @@ useContext :
 - language 
 - global settings
 - shopping cart
+
+useReducer - used to manage multiple states in the component. Also manages state using a Reducer function and deploy/dispatch actions
+- complex logic and interdependent states like email password reset submit validation
+const [state, dispatch] = useReducer(reducer, initialState)
+function reducer(state, action){
+    switch(action.type){
+        case "":
+        return ;
+    }
+}
+
+
+router - react application to help with navigation different pages of component
+npm i react-router-dom
+
+ROuting components: 
+BrowserRouter - used to Enable the router
+Routes - it manages All Routes
+Route - Defines which component or page should be displayed in the specific url
+Link - used to navigate from one page to another
