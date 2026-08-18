@@ -106,7 +106,7 @@ function reducer(state, action){
 }
 
 
-router - react application to help with navigation different pages of component
+router - react application to help with navigation different pages of component without reloading the application. 
 npm i react-router-dom
 
 ROuting components: 
@@ -114,3 +114,21 @@ BrowserRouter - used to Enable the router
 Routes - it manages All Routes
 Route - Defines which component or page should be displayed in the specific url
 Link - used to navigate from one page to another
+
+<BrowserRouter>
+    <Navbar />
+        <Routes>
+            <Route path="/" element = {<HomeComponent />}/>
+            <Route>
+                <Route />
+            </Route>
+        </Routes>
+</BrowserRouter>
+
+<Link to="/product">Product Page</Link>
+
+//Placing Navbar outside the Routes structure makes it render in every component placed inside Routes. Is it rendered/painted every time a link is clicked? idk. But it appears
+
+Nested Routing - Route inside another Route
+<Outlet /> -> to arrive at a Component through Link. Used to display Child component inside Parent component.
+Placed inside the same calling component (Parent).. 
