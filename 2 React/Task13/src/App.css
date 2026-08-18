@@ -1,0 +1,273 @@
+/* =========================
+   General
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  background-color: #111827;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  padding: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+/* =========================
+   Home & Contact Pages
+========================= */
+
+.homepage {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background-color: white;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.homepage h1 {
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.homepage p {
+  color: #6b7280;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Products Page
+========================= */
+
+.products-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+
+  text-align: center;
+}
+
+.products-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.products-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   Category Navigation
+========================= */
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  color: #374151;
+
+  background-color: white;
+
+  padding: 10px 22px;
+
+  border-radius: 8px;
+
+  border: 1px solid #d1d5db;
+
+  transition: all 0.2s ease;
+}
+
+.category-nav a:hover {
+  background-color: #111827;
+  color: white;
+}
+
+/* =========================
+   Product Grid
+========================= */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+  text-align: left;
+}
+
+/* =========================
+   Product Card
+========================= */
+
+.product-card {
+  background-color: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   Product Image
+========================= */
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   Product Information
+========================= */
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: #6b7280;
+
+  line-height: 1.5;
+
+  margin-bottom: 15px;
+}
+
+.product-info .price {
+  color: #111827;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.product-info button {
+  width: 100%;
+
+  border: none;
+
+  background-color: #2563eb;
+  color: white;
+
+  padding: 11px 15px;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.product-info button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .products-page {
+    margin-top: 30px;
+  }
+
+  .products-page h1 {
+    font-size: 30px;
+  }
+
+  .category-nav {
+    flex-wrap: wrap;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

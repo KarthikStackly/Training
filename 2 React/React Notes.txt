@@ -132,3 +132,5 @@ Link - used to navigate from one page to another
 Nested Routing - Route inside another Route
 <Outlet /> -> to arrive at a Component through Link. Used to display Child component inside Parent component.
 Placed inside the same calling component (Parent).. 
+
+in Navbar, using Link, I don't need to import the component, I just need to Link it to the Path. I could write Anything as the display but the path is important
