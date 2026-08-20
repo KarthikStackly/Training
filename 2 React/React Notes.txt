@@ -134,3 +134,15 @@ Nested Routing - Route inside another Route
 Placed inside the same calling component (Parent).. 
 
 in Navbar, using Link, I don't need to import the component, I just need to Link it to the Path. I could write Anything as the display but the path is important
+
+useNavigate - React hook used to navigate from one page to another, using JS logic... mostly for buttons. 
+const xyz = useNavigate();
+xyz("/path")
+
+useId() - React hook used to generate unique id 
+useParams() - React Router hook used to get values dynamically from url
+
+useSearchParams() - React Router Hook used to read or change the query parameter in the url
+const [searchParams, setSearchParams] = useSearchParams(); //no initial value needed
+const category = searchParams.get();
+const category = searchParams.set();
