@@ -146,3 +146,8 @@ useSearchParams() - React Router Hook used to read or change the query parameter
 const [searchParams, setSearchParams] = useSearchParams(); //no initial value needed
 const category = searchParams.get();
 const category = searchParams.set();
+
+useMemo = to remember/store a result of a calculated value or operation?
+
+Custom Hook - It is a JS Function that lets you reuse stateful logic across Components
+Custom Hooks names must start with 'use'
