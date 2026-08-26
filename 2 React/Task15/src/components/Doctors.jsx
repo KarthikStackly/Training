@@ -1,44 +1,58 @@
-import DoctorCard from "./DoctorCard"
-import { useEffect, useState } from "react"
-import Loader from "./Loader"
-import Error from "./Error"
+import { useSearchParams } from "react-router-dom";
+import DoctorCard from "./DoctorCard";
+import Loader from "./Loader";
+import ErrorMessage from "./ErrorMessage";
+import useFetch from "../useFetch";
 
 function Doctors() {
 
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("")
+    const [searchParams, setSearchParams] =
+        useSearchParams();
 
-    const api = "https://dummyjson.com/users";
+    const search = searchParams.get("search") || "";
 
-    useEffect(() => {
-        fetch(api).then((res) => {
-            if (!res.ok) {
-                throw new Error("Failed to fetch users");
-            }
-            return res.json();
-        })
-            .then((data) => {
-                console.log(data.users)
-                setData(data.users);
-            })
-            .catch((err) => {
-                setError(err.message)
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, []);
+    const { data, loading, error } = useFetch("https://dummyjson.com/users");
 
-    if (loading) return <Loader />;
-    if (error) return <Error />
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        return <ErrorMessage message={error} />;
+    }
+
+    const doctors = data?.users || [];
+    const filteredDoctors = doctors.filter((doctor) => {
+        const fullName =
+            `${doctor.firstName} ${doctor.lastName}`
+                .toLowerCase();
+        return fullName.includes(search.toLowerCase());
+    });
+
+    function handleSearch(e) {
+        const value = e.target.value;
+        if (value) {
+            setSearchParams({ search: value });
+        } else {
+            setSearchParams({});
+        }
+    }
 
     return (
-        <div>
+        <section className="page">
             <h1>Our Doctors</h1>
-            {data && (data.filter(c => c.id <= 2).map(doc => (<DoctorCard key={doc.id} doc={doc} />)))}
-        </div>
-    )
+            <div className="search-box">
+                <input type="text" placeholder="Search doctors..." value={search} onChange={handleSearch} />
+            </div>
+            <div className="doctor-grid">
+                {filteredDoctors.map((doctor) => (
+                    <DoctorCard key={doctor.id} doc={doctor} />
+                ))}
+            </div>
+
+            {filteredDoctors.length === 0 && (<p>No doctors found.</p>)}
+        </section>
+    );
 }
 
-export default Doctors
+export default Doctors;

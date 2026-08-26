@@ -1,9 +1,11 @@
 function Loader() {
+
     return (
-        <h1>
-            Loading.....
-        </h1>
-    )
+        <div className="loader-container">
+            <div className="loader"></div>
+            <p>Loading...</p>
+        </div>
+    );
 }
 
-export default Loader
+export default Loader;
