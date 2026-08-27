@@ -56,6 +56,7 @@ function Departments() {
 
     return (
         <section className="page">
+            <Outlet />
             <h1>Our Departments</h1>
             <p className="page-description">Explore the medical departments available at our hospital.</p>
 
@@ -65,7 +66,6 @@ function Departments() {
                 ))}
             </div>
 
-            <Outlet />
         </section>
     );
 }

@@ -5,6 +5,8 @@ function useFetch(url) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // const api = "https://randomuser.me/api/?results=12&nat=in&seed=60f9679805a0dc1e";
+
   useEffect(() => {
     fetch(url)
       .then((res) => {
@@ -15,7 +17,8 @@ function useFetch(url) {
         return res.json();
       })
       .then((result) => {
-        setData(result);
+        // console.log(result.results);
+        setData(result.results);
       })
       .catch((err) => {
         setError(err.message);

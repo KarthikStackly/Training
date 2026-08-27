@@ -63,10 +63,10 @@ function Appointments() {
     ];
 
     const doctors = [
-        "Dr. John Smith",
-        "Dr. Emily Johnson",
-        "Dr. Michael Brown",
-        "Dr. Sarah Williams"
+        "Dr. Ramya Shayana",
+        "Dr. Naveen Patil",
+        "Dr. Krish Adiga",
+        "Dr. Indrajit Taj"
     ];
 
     function handleChange(e) {

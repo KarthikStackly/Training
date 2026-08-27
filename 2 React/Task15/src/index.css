@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+  color: #222;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+main {
+  flex: 1;
+}
+
+.page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.page h1 {
+  margin-bottom: 15px;
+}
+
+.page-description {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Navbar */
+
+.navbar {
+  min-height: 70px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  background-color: #e8f3f8;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-buttons a,
+.department-card a,
+.doctor-card a,
+.not-found a {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background-color: #2176ae;
+  color: white;
+}
+
+/* General Cards */
+
+.info-grid,
+.department-grid,
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.info-card,
+.department-card,
+.doctor-card,
+.contact-card {
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.department-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.department-card h2,
+.doctor-card h2 {
+  margin-top: 0;
+}
+
+.department-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.department-card ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.department-details {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  border-left: 4px solid #2176ae;
+}
+
+.doctor-card {
+  text-align: center;
+}
+
+.doctor-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.doctor-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Doctor Profile */
+
+.doctor-profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.doctor-profile a {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background-color: #2176ae;
+  color: white;
+}
+
+.doctor-profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Search */
+
+.search-box {
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Appointment */
+
+.appointment-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-container h1 {
+  margin-top: 0;
+}
+
+.appointment-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2176ae;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.error {
+  margin: 0;
+  color: #c62828;
+  font-size: 13px;
+}
+
+.appointment-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2176ae;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.appointment-container button:hover {
+  opacity: 0.9;
+}
+
+.success-message {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e7f5e9;
+  color: #236b32;
+}
+
+/* Contact */
+
+.contact-card {
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+/* Loader */
+
+.loader-container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #2176ae;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Errors / 404 */
+
+.error-page,
+.not-found {
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+  padding: 35px 5%;
+  text-align: center;
+  background-color: #1f2933;
+  color: white;
+}
+
+footer p {
+  margin: 7px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .info-grid,
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 30px 0;
+  }
+
+  .info-grid,
+  .department-grid,
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-container {
+    padding: 25px 20px;
+  }
+
+  .hero {
+    padding: 50px 6%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    text-align: center;
+  }
+
+  .doctor-profile {
+    padding: 25px;
+  }
+}

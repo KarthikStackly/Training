@@ -11,7 +11,7 @@ function Doctors() {
 
     const search = searchParams.get("search") || "";
 
-    const { data, loading, error } = useFetch("https://dummyjson.com/users");
+    const { data, loading, error } = useFetch("https://randomuser.me/api/?results=12&nat=in&seed=60f9679805a0dc1e");
 
     if (loading) {
         return <Loader />;
@@ -21,11 +21,9 @@ function Doctors() {
         return <ErrorMessage message={error} />;
     }
 
-    const doctors = data?.users || [];
+    const doctors = data || [];
     const filteredDoctors = doctors.filter((doctor) => {
-        const fullName =
-            `${doctor.firstName} ${doctor.lastName}`
-                .toLowerCase();
+        const fullName = `${doctor.name.first} ${doctor.name.last}`.toLowerCase();
         return fullName.includes(search.toLowerCase());
     });
 
@@ -46,7 +44,7 @@ function Doctors() {
             </div>
             <div className="doctor-grid">
                 {filteredDoctors.map((doctor) => (
-                    <DoctorCard key={doctor.id} doc={doctor} />
+                    <DoctorCard key={doctor.login.uuid} doc={doctor} />
                 ))}
             </div>
 

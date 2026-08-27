@@ -5,7 +5,13 @@ import useFetch from "../useFetch";
 
 function DoctorDetails() {
     const { id } = useParams();
-    const { data: doctor, loading, error } = useFetch(`https://dummyjson.com/users/${id}`);
+    const { data, loading, error } = useFetch("https://randomuser.me/api/?results=12&nat=in&seed=60f9679805a0dc1e");
+
+    // console.log(data);
+    const doctor = data?.find(
+        (doc) => doc.login.uuid === id
+    ) || [];
+    // console.log(doctor)
 
     if (loading) {
         return <Loader />;
@@ -15,17 +21,26 @@ function DoctorDetails() {
         return <ErrorMessage message={error} />;
     }
 
+    if (!doctor) {
+        return <p>Doctor not found.</p>;
+    }
+
     return (
         <section className="page doctor-profile">
-            <img src={doctor.image} alt={`${doctor.firstName} ${doctor.lastName}`} />
-            <div>
-                <h1>Dr. {doctor.firstName} {doctor.lastName}</h1>
-                <p><strong>Email:</strong>{doctor.email}</p>
-                <p><strong>Phone:</strong>{doctor.phone}</p>
-                <p><strong>Age:</strong>{doctor.age}</p>
-                <p><strong>Gender:</strong>{doctor.gender}</p>
-                <Link to="/doctors">Back to Doctors</Link>
-            </div>
+            {doctor && (
+                <>
+                    <img src={doctor.picture.large} alt={`${doctor.name.first} ${doctor.name.last}`} />
+                    <div>
+                        <h1>Dr. {doctor.name.first} {doctor.name.last}</h1>
+                        <p><strong>Email: </strong>{doctor.email}</p>
+                        <p><strong>Phone: </strong>{doctor.phone}</p>
+                        <p><strong>Age: </strong>{doctor.dob.age}</p>
+                        <p><strong>Gender: </strong>{doctor.gender}</p>
+                        <Link to="/doctors">Back to Doctors</Link>
+
+                    </div>
+                </>
+            )}
         </section>
     );
 }
