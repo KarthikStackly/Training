@@ -12,9 +12,9 @@ public class ScannerDelimiter {
 //      scan.useDemiliter(",") = scan.nextLine();
 //      scan.next();
 //      scan.useDelimiter("\n"); //Default Delimiter
+// For Multiple Delimiters use square brackets and escape characters [, \s \\ _]+
 
-//        scan.useDelimiter(","); //We're just telling JVM to use a different token for delimitation, nextLine vs comma
-
+    //        scan.useDelimiter(","); //We're just telling JVM to use a different token for delimitation, nextLine vs comma
         String friends = scan.nextLine();
         Scanner scan2 = new Scanner(friends);
         scan2.useDelimiter(",");
