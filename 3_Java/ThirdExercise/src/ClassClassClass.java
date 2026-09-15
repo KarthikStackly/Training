@@ -31,6 +31,10 @@ public class ClassClassClass {
         System.out.println("Total Marks scored by " + studentName + " : " + totalMarks);
         System.out.println(studentName + "'s class Average : " + average);
 
+        System.out.printf("\n%-10s %-10s %-10s %-10s %-10s %-10s %-10s%n", "Name", "Class", "Maths", "Physics", "Chemistry", "Total", "Average");
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.printf("%-10s %-10s %-10d %-10d %-10d %-10d %-10f%n", studentName, studentClass, marks1, marks2, marks3, totalMarks, average);
+
 
         scan.close();
     }
