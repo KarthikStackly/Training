@@ -1,0 +1,7 @@
+Student ID: 101
+Name: Rahul
+Course: Java
+Marks: 85
+101,Rahul,85
+103,Arun,76
+104,Meena,89
